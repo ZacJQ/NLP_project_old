@@ -13,7 +13,7 @@ def google_translate(input_text:str, output_text:str)-> str:
     return output_text
 
 
-def scrape_target(question:str , driver:webdriver) -> str:
+def scrape_target(question:str) -> str:
     driver.maximize_window()
     text_box = driver.find_element(By.ID, id_gpt_input)
     text_box.send_keys(question)
